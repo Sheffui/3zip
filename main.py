@@ -7,7 +7,7 @@ import secrets
 import tkinter as tk
 from tkinter import filedialog, messagebox
 
-def ensure_output_folder(base_name):
+def verify_output_folder(base_name):
     """Ensure an incremented output folder exists."""
     index = 0
     while True:
@@ -79,7 +79,7 @@ def decrypt_file(input_file, key, output_file):
     with open(output_file, 'wb') as f_out:
         f_out.write(decrypted_data)
 
-def embed_in_images(image_files, data_file, output_folder):
+def embed_file(image_files, data_file, output_folder):
     """Embed data into multiple images."""
     with open(data_file, 'rb') as f:
         data = f.read()
@@ -92,7 +92,7 @@ def embed_in_images(image_files, data_file, output_folder):
         secret_image = lsb.hide(image_file, chunk.hex())
         secret_image.save(output_image)
 
-def extract_from_images(image_files, output_file):
+def extract_file(image_files, output_file):
     """Extract data from multiple images."""
     extracted_data = []
     for image_file in image_files:
@@ -170,8 +170,8 @@ class FileSecurityApp:
             create_tarball(self.input_files, tarball_file)
             compress_file(tarball_file, compressed_file)
             encrypt_file(compressed_file, self.key.get(), encrypted_file)
-            output_folder = ensure_output_folder("encrypted_output")
-            embed_in_images(self.image_files, encrypted_file, output_folder)
+            output_folder = verify_output_folder("encrypted_output")
+            embed_file(self.image_files, encrypted_file, output_folder)
             messagebox.showinfo("Success", f"Data secured in {output_folder}")
         finally:
             cleanup_temp_folder(temp_dir)
@@ -185,8 +185,8 @@ class FileSecurityApp:
         try:
             extracted_file = os.path.join(temp_dir, "extracted.cam")
             decompressed_file = os.path.join(temp_dir, "decompressed.tar")
-            output_dir = ensure_output_folder("decrypted_output")
-            extract_from_images(self.image_files, extracted_file)
+            output_dir = verify_output_folder("decrypted_output")
+            extract_file(self.image_files, extracted_file)
             decrypt_file(extracted_file, self.key.get(), decompressed_file)
             extract_tarball(decompressed_file, output_dir)
             messagebox.showinfo("Success", f"Data restored in {output_dir}")
