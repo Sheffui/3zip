@@ -12,9 +12,9 @@ def main():
     temp_dir = ".temp"
     os.makedirs(temp_dir, exist_ok=True)
     
-    input_files = ["input/text1.txt", "docx.docx"]
-    image_files = ["input/000.png", "input/00.jpg", "input/0.webp"]
-    image_files_e = [".temp/000.png", ".temp/00.png", ".temp/0.png"]
+    input_files = ["input/text1.txt", "input/docx.docx"]
+    image_files = ["input/000.png", "input/00.jpg", "input/0.webp", "input/big.png"]
+    image_files_e = [".temp/000.png", ".temp/00.png", ".temp/0.png", ".temp/big.png"]
     key = "testkey1234567890"
     
     tarball_file = os.path.join(temp_dir, "test.tar")
