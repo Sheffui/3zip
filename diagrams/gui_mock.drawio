@@ -1,0 +1,82 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.9 Chrome/128.0.6613.186 Electron/32.3.1 Safari/537.36" version="26.0.9">
+  <diagram name="Page-1" id="lP0KMhrnU7VJ4-2vI4qK">
+    <mxGraphModel dx="768" dy="606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sBBwmr0-jNvAD0dArZGU-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="120" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="sBBwmr0-jNvAD0dArZGU-2" value="3zip&lt;br&gt;(title)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="80" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sBBwmr0-jNvAD0dArZGU-3" value="Encrypt (button)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="110" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sBBwmr0-jNvAD0dArZGU-4" value="Decrypt (button)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="170" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sBBwmr0-jNvAD0dArZGU-5" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="110" as="sourcePoint" />
+            <mxPoint x="320" y="110.34" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sBBwmr0-jNvAD0dArZGU-6" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="80" width="120" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="sBBwmr0-jNvAD0dArZGU-7" value="Encrypt&lt;br&gt;(title)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="80" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sBBwmr0-jNvAD0dArZGU-8" value="Select files (button)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="370" y="110" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sBBwmr0-jNvAD0dArZGU-9" value="selected files (list)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;" vertex="1" parent="1">
+          <mxGeometry x="370" y="130" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sBBwmr0-jNvAD0dArZGU-10" value="Select images (button)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="370" y="150" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sBBwmr0-jNvAD0dArZGU-11" value="selected images (list)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;" vertex="1" parent="1">
+          <mxGeometry x="370" y="170" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sBBwmr0-jNvAD0dArZGU-12" value="password (box)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="347.5" y="190" width="105" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sBBwmr0-jNvAD0dArZGU-13" value="Encrypt&lt;br&gt;(button)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="220" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sBBwmr0-jNvAD0dArZGU-14" value="back&lt;br&gt;(button)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="260" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sBBwmr0-jNvAD0dArZGU-15" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="320" width="120" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="sBBwmr0-jNvAD0dArZGU-16" value="Decrypt&lt;br&gt;(title)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="320" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sBBwmr0-jNvAD0dArZGU-19" value="Select images (button)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="370" y="350" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sBBwmr0-jNvAD0dArZGU-20" value="selected images (list)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;" vertex="1" parent="1">
+          <mxGeometry x="370" y="370" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sBBwmr0-jNvAD0dArZGU-21" value="password (box)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="347.5" y="390" width="105" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sBBwmr0-jNvAD0dArZGU-22" value="Decrypt&lt;br&gt;(button)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="420" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sBBwmr0-jNvAD0dArZGU-23" value="back&lt;br&gt;(button)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="460" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sBBwmr0-jNvAD0dArZGU-24" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="189.43" as="sourcePoint" />
+            <mxPoint x="330" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
