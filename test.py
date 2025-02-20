@@ -12,7 +12,7 @@ def main():
     temp_dir = ".temp"
     os.makedirs(temp_dir, exist_ok=True)
     
-    input_files = ["input/text1.txt"]
+    input_files = ["input/text1.txt", "docx.docx"]
     image_files = ["input/000.png", "input/00.jpg", "input/0.webp"]
     image_files_e = [".temp/000.png", ".temp/00.png", ".temp/0.png"]
     key = "testkey1234567890"
