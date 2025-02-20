@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 297 210"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="fig1.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="11.313709"
+     inkscape:cx="60.501824"
+     inkscape:cy="47.685513"
+     inkscape:window-width="1920"
+     inkscape:window-height="1052"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       id="grid1"
+       units="mm"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="0.99999998"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <linearGradient
+       id="a"
+       y1="785.71002"
+       y2="727.71002"
+       gradientUnits="userSpaceOnUse"
+       x2="0"
+       gradientTransform="matrix(0.72727,0,0,0.68966,0.727,1.931)">
+      <stop
+         stop-color="#22a7f0"
+         id="stop1" />
+      <stop
+         offset="1"
+         stop-color="#19b5fe"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="c"
+       y1="16"
+       x1="16"
+       y2="32"
+       x2="32"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#383e51"
+         id="stop5" />
+      <stop
+         offset="1"
+         stop-color="#655c6f"
+         stop-opacity="0"
+         id="stop6" />
+    </linearGradient>
+    <linearGradient
+       id="b"
+       y1="20"
+       y2="4"
+       x2="0"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#60c0f4"
+         id="stop3" />
+      <stop
+         offset="1"
+         stop-color="#b9e9ff"
+         id="stop4" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,-98.86748,-128.88041)"
+       id="g9">
+      <path
+         fill="url(#a)"
+         d="m 392.58,503.8 c -0.006,0 -0.01,3.568 -0.01,8 v 24 c 0,4.432 0.004,8 0.01,8 h 31.98 c 0.006,0 0.01,-3.568 0.01,-8 v -20 l -12,-12 z"
+         id="path6"
+         style="fill:url(#a)" />
+      <path
+         opacity="0.2"
+         fill="url(#c)"
+         fill-rule="evenodd"
+         d="m 32,16 v 1 H 16 l 2,2 h -2 l 4,4 H 16 L 17.334,24.334 16,25 l 4,4 h -4 l 2,2 H 16 L 29,44 H 39.99 C 39.996,44 40,40.432 40,36 V 24 Z"
+         transform="translate(384.57,499.8)"
+         id="path7"
+         style="fill:url(#c)" />
+      <rect
+         width="32"
+         x="392.57001"
+         y="542.79999"
+         fill="#2e3132"
+         height="1"
+         fill-opacity="0.294"
+         id="rect7" />
+      <path
+         fill="#2584b7"
+         d="m 424.56,513.79 c 0.006,-0.009 0.01,-2.226 0.01,-4.99 0,-2.77 -0.004,-5 -0.01,-5 h -9.98 c 0,0 0,0.01 0,0.01 z"
+         id="path8" />
+      <path
+         fill="url(#b)"
+         d="M 4,4 V 5 H 20 V 4 Z M 4,6 V 7 H 17 V 6 Z m 0,4 v 1 h 16 v -1 z m 0,2 v 1 h 2 v -1 z m 0,4 v 1 h 16 v -1 z m 0,2 v 1 h 13 v -1 z m 14,1 v 1 h 2 v -1 z"
+         transform="translate(396.57,511.8)"
+         id="path9"
+         style="fill:url(#b)" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke-width:0.264583"
+       x="4.7999749"
+       y="18.2987"
+       id="text1"><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="4.7999749"
+         y="18.2987"
+         id="tspan2">5845299c...</tspan></text>
+  </g>
+</svg>
