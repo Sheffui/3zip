@@ -15,8 +15,8 @@ source "$VENV_DIR/bin/activate"
 if [ -f "requirements.txt" ]; then
   echo "Installing requirements..."
   pip install -r requirements.txt
-  echo "Running test.py"
-  python test.py
+  echo "Running..."
+  python main.py
   deactivate
 else
   echo "requirements.txt not found. Aborting."

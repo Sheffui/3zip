@@ -12,8 +12,8 @@ call "%VENV_DIR%\Scripts\activate"
 if exist requirements.txt (
     echo Installing requirements...
     pip install -r requirements.txt
-    echo Running test.py
-    python test.py
+    echo Running...
+    python main.py
     call "%VENV_DIR%\Scripts\deactivate"
 ) else (
     echo requirements.txt not found. Aborting.
