@@ -211,17 +211,11 @@ class FileSecurityApp:
         
         try:
             extracted_file = os.path.join(temp_dir, "extracted.cam")	
-            input("extractedfile")
             decompressed_file = os.path.join(temp_dir, "decompressed.tar")
-            input("decompressedfile")
             output_dir = verify_output_folder("decrypted_output")
-            input("decryptedoutput")
             extract_file(self.image_files, extracted_file)
-            input("do1")
             decrypt_file(extracted_file, self.key.get(), decompressed_file)
-            input("do2")
             extract_tarball(decompressed_file, output_dir)
-            input("do3")
             messagebox.showinfo("Success", f"Data restored in {output_dir}")
         finally:
             cleanup_temp_folder(temp_dir)
