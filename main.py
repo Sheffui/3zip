@@ -80,32 +80,58 @@ def decrypt_file(input_file, key, output_file):
         f_out.write(decrypted_data)
 
 def embed_file(image_files, data_file, output_folder):
-    """Embed data into multiple images."""
+    """Embed encrypted data into multiple images."""
     with open(data_file, 'rb') as f:
         data = f.read()
-    chunk_size = len(data) // len(image_files)
-    chunks = [data[i * chunk_size:(i + 1) * chunk_size] for i in range(len(image_files))]
-    chunks[-1] += data[len(chunks) * chunk_size:]  # Add any leftover bytes to the last chunk
+
+    num_images = len(image_files)
+    chunk_size = len(data) // num_images
+    chunks = [data[i * chunk_size:(i + 1) * chunk_size] for i in range(num_images)]
+    
+    # Add any leftover bytes to the last chunk
+    if len(data) % num_images != 0:
+        chunks[-1] += data[num_images * chunk_size:]
+
+    print(f"Total data size: {len(data)} bytes")
     for i, (chunk, image_file) in enumerate(zip(chunks, image_files)):
+        print(f"Embedding chunk {i+1}/{num_images} - Size: {len(chunk)} bytes into {image_file}")
+
         file_name, ext = os.path.splitext(os.path.basename(image_file))
         output_image = os.path.join(output_folder, f"{file_name}.png")
-        secret_image = lsb.hide(image_file, chunk.hex())
+
+        # Store chunk index to ensure correct order during extraction
+        secret_message = f"{i}:{chunk.hex()}"
+        secret_image = lsb.hide(image_file, secret_message)
         secret_image.save(output_image)
 
 def extract_file(image_files, output_file):
-    """Extract data from multiple images."""
-    extracted_data = []
+    """Extract encrypted data from multiple images and reconstruct the original data."""
+    extracted_data = {}
+
     for image_file in image_files:
         try:
             data_str = lsb.reveal(image_file)
             if data_str is None:
                 raise ValueError("Missing or corrupted data in one of the images.")
-            extracted_data.append(bytes.fromhex(data_str))
+
+            # Extract chunk index and data
+            index, chunk_hex = data_str.split(":", 1)
+            index = int(index)
+            extracted_data[index] = bytes.fromhex(chunk_hex)
+
+            print(f"Extracted chunk {index} from {image_file} - Size: {len(extracted_data[index])} bytes")
+
         except Exception:
             raise ValueError("Failed to extract data. Ensure all images are present and unaltered.")
+
+    # Reassemble in correct order
+    sorted_data = b"".join([extracted_data[i] for i in sorted(extracted_data.keys())])
+
     with open(output_file, 'wb') as f:
-        for chunk in extracted_data:
-            f.write(chunk)
+        f.write(sorted_data)
+
+    print(f"Total extracted data size: {len(sorted_data)} bytes")
+
 
 class FileSecurityApp:
     def __init__(self, root):
@@ -182,13 +208,20 @@ class FileSecurityApp:
             return
         temp_dir = ".temp"
         os.makedirs(temp_dir, exist_ok=True)
+        
         try:
-            extracted_file = os.path.join(temp_dir, "extracted.cam")
+            extracted_file = os.path.join(temp_dir, "extracted.cam")	
+            input("extractedfile")
             decompressed_file = os.path.join(temp_dir, "decompressed.tar")
+            input("decompressedfile")
             output_dir = verify_output_folder("decrypted_output")
+            input("decryptedoutput")
             extract_file(self.image_files, extracted_file)
+            input("do1")
             decrypt_file(extracted_file, self.key.get(), decompressed_file)
+            input("do2")
             extract_tarball(decompressed_file, output_dir)
+            input("do3")
             messagebox.showinfo("Success", f"Data restored in {output_dir}")
         finally:
             cleanup_temp_folder(temp_dir)
