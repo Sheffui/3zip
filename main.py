@@ -5,7 +5,9 @@ import stegano.lsb as lsb
 import camellia
 import secrets
 import tkinter as tk
-from tkinter import filedialog, messagebox
+from tkinter import filedialog, messagebox, PhotoImage
+from tkinter import font as tkFont
+
 
 def verify_output_folder(base_name):
     """Ensure an incremented output folder exists."""
@@ -133,16 +135,30 @@ def extract_file(image_files, output_file):
     print(f"Total extracted data size: {len(sorted_data)} bytes")
 
 
-class FileSecurityApp:
+class ThreeZip:
     def __init__(self, root):
         self.root = root
-        self.root.title("File Security Application")
-        self.main_menu()
+        self.root.title("3zip")
+        self.root.minsize(400, 300)
 
+        font_path = os.path.join("assets", "JosefinSans-Bold.ttf")
+        if os.path.exists(font_path):
+            self.custom_font = tkFont.Font(family="JosefinSans", size=24)
+            self.root.option_add("*Font", self.custom_font)
+        else:
+            self.custom_font = ("Arial", 24)
+
+        logo_path = os.path.join("assets", "logo.png")
+        if os.path.exists(logo_path):
+            self.logo = PhotoImage(file=logo_path)
+            self.root.iconphoto(True, self.logo)
+
+
+        self.main_menu()
     def main_menu(self):
         for widget in self.root.winfo_children():
             widget.destroy()
-        tk.Label(self.root, text="3zip", font=("07AkazukinPop", 24)).pack(pady=20)
+        tk.Label(self.root, text="3zip", font=self.custom_font).pack(pady=20)
         tk.Button(self.root, text="Encrypt Files", command=self.encrypt_menu).pack(pady=10)
         tk.Button(self.root, text="Decrypt Files", command=self.decrypt_menu).pack(pady=10)
 
@@ -222,7 +238,7 @@ class FileSecurityApp:
 
 def main():
     root = tk.Tk()
-    app = FileSecurityApp(root)
+    app = ThreeZip(root)
     root.mainloop()
 
 if __name__ == "__main__":
