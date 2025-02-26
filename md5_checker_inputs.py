@@ -34,7 +34,7 @@ def compare_md5_checksums(input_folder="input", restored_folder=None):
             restored_md5 = calculate_md5(restored_files[filename])
             input_md5 = calculate_md5(input_files[filename])
             if restored_md5 == input_md5:
-                print(f"\033[32m{filename}: MD5s match.\032[0m")
+                print(f"\033[32m{filename}: MD5s match.\033[0m")
             else:
                 print(f"\033[33m{filename}: MD5s do not match.\033[0m")
         else:
